@@ -18,7 +18,7 @@ const checkIfDBConnectionIsValid = (rethinkdbHost) => {
       console.log(`Getting db list for '${rethinkdbHost}' ...`)
       return Promise.all([r.dbList().run(conn), r.tableList().run(conn)])
     })
-   .spread(function (dbList, tableList) {
+    .spread(function (dbList, tableList) {
       console.log(`DB and table list for ${rethinkdbHost} ...`, dbList, tableList)
       return { dbList, tableList }
     })
@@ -52,7 +52,7 @@ http.createServer(function (req, res) {
     checkIfDBConnectionIsValid(process.env.RETHINKDB_4)
   ])
     .then(hosts => {
-     res.end(j({
+      res.end(j({
         message: 'Hello: Succesfully connected to DB',
         opts,
         hosts
