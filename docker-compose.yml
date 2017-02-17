@@ -12,7 +12,8 @@ services:
       - 'rethinkdb4:omg.not.another.one' # http://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid
     environment:
       - PORT=3000
-      - RETHINKDB_3=another1.super_weird.00host
+      - RETHINKDB_3_1=rethinkdb3
+      - RETHINKDB_3_2=another1.super_weird.00host
     env_file:
       - env/some-environment-name/.env
   rethinkdb1:
