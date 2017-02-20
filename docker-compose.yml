@@ -8,12 +8,12 @@ services:
     links:
       - 'rethinkdb1'
       - 'rethinkdb2:some-weird-host'
-      - 'rethinkdb3:wow-changing-the-weird-host' # http://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid
-      - 'rethinkdb4:wow-changing-the-hostname' # http://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid
+      - 'rethinkdb3:three-changing-the-weird-host' # http://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid
+      - 'rethinkdb4:three-changing-the-hostname' # http://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid
     environment:
       - PORT=3000
       - RETHINKDB_3_1=rethinkdb3
-      - RETHINKDB_3_2=wow-changing-the-weird-host
+      - RETHINKDB_3_2=three-changing-the-weird-host
       - RETHINKDB_4_3=rethinkdb4
     env_file:
       - env/some-environment-name/.env
