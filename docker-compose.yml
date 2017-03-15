@@ -8,6 +8,7 @@ services:
     links:
       - 'rethinkdb1'
       - 'rethinkdb2:some-weird-host'
+      - 'rethinkdb2:something'
       - 'rethinkdb3:three-changing-the-weird-host' # http://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid
       - 'rethinkdb4:three-changing-the-hostname' # http://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid
     environment:
